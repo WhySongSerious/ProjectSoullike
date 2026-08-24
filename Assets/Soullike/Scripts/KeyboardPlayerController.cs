@@ -111,10 +111,14 @@ namespace ProjectSoullike
 
         private void Update()
         {
+            bool wasCursorLocked = Cursor.lockState == CursorLockMode.Locked;
             HandleCursorAndCameraInput();
 
             Keyboard keyboard = Keyboard.current;
-            bool attackPressed = keyboard != null && keyboard.jKey.wasPressedThisFrame;
+            Mouse mouse = Mouse.current;
+            bool attackPressed = wasCursorLocked &&
+                mouse != null &&
+                mouse.leftButton.wasPressedThisFrame;
             UpdateAttackCombo(attackPressed);
 
             Vector2 input = keyboard == null ? Vector2.zero : ReadMovementInput(keyboard);
