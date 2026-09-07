@@ -77,6 +77,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 904089e134202c94ea1fe3429825a92e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3447371942529058543}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 904089e134202c94ea1fe3429825a92e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3557371942529058544}
   m_SourcePrefab: {fileID: 100100000, guid: 904089e134202c94ea1fe3429825a92e, type: 3}
 --- !u!4 &1397543547974687710 stripped
 Transform:
@@ -123,21 +126,34 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45be82e2f34dd0e48b6a93bb3c950254, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::ProjectSoullike.KeyboardPlayerController
   walkSpeed: 2.2
   runSpeed: 4.8
   attackMovementMultiplier: 0.15
   rotationSpeed: 720
   gravity: -25
+  inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  gamepadLookSpeed: 150
   animationDampTime: 0.1
   attackBlendDuration: 0.06
   comboInputOpen: 0.45
   comboInputClose: 0.92
   comboAdvanceTime: 0.9
   attackEndTime: 0.98
-  recoveryBlendDuration: 0.04
-  recoveryDuration: 0.56
+  recoveryBlendDuration: 0.18
+  recoveryDuration: 0.26
+  attackOneDamage: 20
+  attackTwoDamage: 30
+  attackThreeDamage: 50
+  attackHitWindowOpen: 0.22
+  attackHitWindowClose: 0.68
+  attackHitHeight: 1.05
+  attackHitDistance: 1.05
+  attackHitRadius: 0.85
+  attackHitMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
   controlMainCamera: 1
   cameraPivotHeight: 1.45
   cameraDistance: 4.6
@@ -153,6 +169,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   lockCursorOnStart: 1
+--- !u!114 &3557371942529058544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2882908022461130224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8398685bfc6f413f9067cdd1a11b168b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectSoullike.PlayerHealth
+  maxHealth: 100
+  showHealthBar: 1
+  healthBarWidth: 240
+  healthBarHeight: 18
 --- !u!1001 &9176567153548226146
 PrefabInstance:
   m_ObjectHideFlags: 0
