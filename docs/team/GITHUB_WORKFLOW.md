@@ -32,12 +32,14 @@ GitHub Projects는 이슈와 PR을 표·보드·로드맵으로 관리합니다.
 
 1. 저장소 Projects → 새 프로젝트 생성 또는 계정의 새 Project 생성 후 저장소 연결.
 2. 이름: ProjectSoullike · 11월 데모. 팀 접근 범위에 맞게 권한 설정.
-3. 기존 이슈 #3~#20을 추가. #2는 안내 허브이므로 작업량 집계에서는 제외.
+3. 기존 이슈 #3~#27을 추가. #2는 안내 허브이므로 작업량 집계에서는 제외.
 4. Status: Backlog / Ready / In progress / Review / Done.
-5. 필드: Assignees, Priority(P0/P1/P2), Sprint(S0~S6/Backlog), Estimate(숫자), Blocked(선택).
+5. 필드: Assignees, Priority(P0/P1/P2), Sprint(S0~S8/마감/Backlog), Estimate(숫자), Blocked(선택).
 6. 보기: 전체 백로그(표), 이번 주(보드·Sprint 필터), 담당자별(Assignees 그룹), 일정(로드맵).
 7. 이슈 닫힘→Done 자동화를 켜고, 새 이슈 자동 추가 범위를 이 저장소로 제한.
 8. 보드 URL을 README와 #2에 추가.
+
+11/23 마감이며 ML 동적 난이도 #21~#27은 필수, 휴대폰 컨트롤러 #5는 여유 시 선택입니다. 11/16 새 기능 동결을 기준으로 운영합니다.
 
 P0는 이번 데모 필수, P1은 개선, P2는 선택 기능입니다. 기능 우선순위와 버그 심각도를 혼동하지 않습니다. 크래시·진행 불가는 우선 수정하고, 시각적 미세 조정은 마감 버퍼를 해치지 않을 때 처리합니다.
 
