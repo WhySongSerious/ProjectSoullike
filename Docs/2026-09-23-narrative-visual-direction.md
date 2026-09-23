@@ -1,6 +1,6 @@
 # 서사·시각 디자인 협의안 A: 마지막 수문
 
-> 2026-09-23 팀 의견을 바탕으로 한 **미확정 후보**. [이번 주 방향 결정 회의안](2026-09-24-direction-workshop.md)에서 다른 후보와 비교한 뒤 선택하거나 수정한다. 현재 Unity 씬에 구현됐다는 뜻이 아니다. [기능·일정 기준](2026-09-23-game-direction.md) 및 [팀 허브 #2](https://github.com/WhySongSerious/ProjectSoullike/issues/2)와 함께 사용한다.
+> 2026-09-23 팀 의견을 바탕으로 한 **미확정 후보**. [이번 주 방향 결정 회의안](2026-09-24-direction-workshop.md)에서 다른 주인공·보스 조합과 비교한 뒤 선택하거나 수정한다. 기존 Mechanic Girl·Stone Golem을 활용하는 안이며 캐릭터 유지 결정이 아니다. 현재 Unity 씬에 이 서사가 구현됐다는 뜻도 아니다. [기능·일정 기준](2026-09-23-game-direction.md) 및 [팀 허브 #2](https://github.com/WhySongSerious/ProjectSoullike/issues/2)와 함께 사용한다.
 
 ## 이 게임이 들려줄 이야기
 

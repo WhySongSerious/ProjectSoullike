@@ -2,11 +2,11 @@
 
 > 2026-09-23 팀 의견을 바탕으로 정리한 작업 기준안. [팀 허브 #2](https://github.com/WhySongSerious/ProjectSoullike/issues/2)의 2026-11-23 마감, 담당, 스프린트를 따른다. 첫 플레이 테스트 결과에 따라 수치와 표현을 수정한다.
 
-세계와 인물, 공간 연출은 [이번 주 방향 결정 회의안](2026-09-24-direction-workshop.md)에서 팀이 확정한다. [마지막 수문](2026-09-23-narrative-visual-direction.md)은 비교할 창작 후보 A다. 이 문서는 전투 범위와 일정상의 경계를 다룬다.
+세계, 주인공, 보스, 공간 연출은 [이번 주 방향 결정 회의안](2026-09-24-direction-workshop.md)에서 팀이 확정한다. [마지막 수문](2026-09-23-narrative-visual-direction.md)은 현재 에셋을 활용하는 창작 후보 A일 뿐이다. 이 문서는 전투 범위와 일정상의 경계를 다룬다.
 
 ## 한 문장
 
-문지기 골렘의 공격 신호를 읽고 여러 번의 도전 끝에 스스로 돌파하는 입문용 3D 소울라이크 액션 게임. **주인공의 목표와 장소의 의미는 S0 팀 협의에서 확정한다.**
+한 명의 강한 상대가 보내는 공격 신호를 읽고 여러 번의 도전 끝에 스스로 돌파하는 입문용 3D 소울라이크 액션 게임. **주인공과 보스의 정체, 목표와 장소의 의미는 S0 팀 협의에서 확정한다.**
 
 ## 플레이어에게 남길 감정
 
@@ -19,7 +19,7 @@
 - **갈등:** 주인공은 골렘을 피해 목적지에 갈 수 없다. 반복된 관찰로 수호 동작의 빈틈을 알아낸다.
 - **결말:** 골렘을 멈추고 핵심 장치로 가는 길을 연다. 승리 연출은 주인공의 숙련을 강조한다.
 
-이 설정은 작업용 기준이다. 긴 컷신이나 대사 없이도 플레이로 전달할 수 있는 범위로 유지한다.
+이 설정은 선택되지 않은 작업용 후보 A다. 주인공이나 보스를 교체할 수 있다. 선택된 방향도 긴 컷신이나 대사 없이 플레이로 전달할 수 있는 범위로 유지한다.
 
 ### 게임 안에서 보여줄 장면
 
@@ -35,7 +35,7 @@
 ### 필수
 
 - 플레이어 이동, 공격, 락온, 체력에 더해 **회피, 스태미나, 피격 반응**을 완성한다.
-- S0에는 패턴 역할을 정하고, S1의 [보스 작업 #7](https://github.com/WhySongSerious/ProjectSoullike/issues/7)에서 **기본 공격과 딜레이가 있는 연계 공격 2종**의 예고·판정·후딜을 먼저 완성한다.
+- S0에는 선택된 보스의 성격에 맞는 패턴 역할을 정하고, S1에 **기본 공격과 변형·연계 공격 2종**의 예고·판정·후딜을 먼저 완성한다. 현재 [보스 작업 #7](https://github.com/WhySongSerious/ProjectSoullike/issues/7)은 골렘을 전제로 작성됐으므로 다른 보스를 택하면 S0에 범위와 제목을 수정해야 한다.
 - 거리에 대응하는 공격은 첫 통합 테스트 결과와 남은 일정을 보고 추가 여부를 정한다.
 - 모든 패턴에는 읽을 수 있는 전조, 확인 가능한 타격 시점, 명확한 사후 빈틈을 둔다.
 - 플레이어와 보스의 체력, 스태미나, 락온 표시를 보여준다.
@@ -68,7 +68,7 @@
 | 단계 | 작업 | 다음 단계로 넘어갈 기준 |
 | --- | --- | --- |
 | S0 기획 | [#4](https://github.com/WhySongSerious/ProjectSoullike/issues/4)에 데모 범위·초기 패턴 2종·테스트 기준과 이 서사 기준을 확정 | 팀원이 같은 목표와 제외 범위를 설명할 수 있다. |
-| S1 전투 | [회피·스태미나 #6](https://github.com/WhySongSerious/ProjectSoullike/issues/6), [보스 2종 #7](https://github.com/WhySongSerious/ProjectSoullike/issues/7), [가독성 #8](https://github.com/WhySongSerious/ProjectSoullike/issues/8) | 처음 보는 사람이 공격을 보고 피할 수 있고 피격 이유를 설명할 수 있다. |
+| S1 전투 | [회피·스태미나 #6](https://github.com/WhySongSerious/ProjectSoullike/issues/6), [보스 패턴 2종 #7](https://github.com/WhySongSerious/ProjectSoullike/issues/7), [가독성 #8](https://github.com/WhySongSerious/ProjectSoullike/issues/8) | 처음 보는 사람이 공격을 보고 피할 수 있고 피격 이유를 설명할 수 있다. |
 | S2 재도전 | [전투 루프 #9](https://github.com/WhySongSerious/ProjectSoullike/issues/9), [보스 리셋 #10](https://github.com/WhySongSerious/ProjectSoullike/issues/10), [첫 테스트 #11](https://github.com/WhySongSerious/ProjectSoullike/issues/11) | 사망·승리 후 재도전이 반복되고 플레이어가 실패 이유를 이해한다. |
 | S3~S6 데이터·학습 | [명세 #21](https://github.com/WhySongSerious/ProjectSoullike/issues/21) → [수집 #22](https://github.com/WhySongSerious/ProjectSoullike/issues/22)·[#23](https://github.com/WhySongSerious/ProjectSoullike/issues/23) → [학습 #24](https://github.com/WhySongSerious/ProjectSoullike/issues/24) | 시도 기록의 품질을 확인하고 학습하지 않은 데이터로 모델을 평가한다. |
 | S7~S8 적용·비교 | [보스 조절 #25](https://github.com/WhySongSerious/ProjectSoullike/issues/25), [Unity 적용 #26](https://github.com/WhySongSerious/ProjectSoullike/issues/26), [비교 테스트 #27](https://github.com/WhySongSerious/ProjectSoullike/issues/27) | 고정형과 ML 적용형의 학습·성취감·공정성을 함께 비교한다. |
@@ -76,7 +76,7 @@
 ## 팀 작업 배분 기준
 
 - **송재혁:** #6의 회피·스태미나와 #9의 전투 루프를 맡고, 이후 ML 수집·학습·Unity 적용을 기술 총괄한다.
-- **천지민:** #7의 보스 초기 2종과 판정·후딜을 맡는다. #25에서 안전한 조절 지점을 제공한다.
+- **천지민:** 선택된 보스의 #7 초기 2종과 판정·후딜을 맡는다. #25에서 안전한 조절 지점을 제공한다.
 - **이다윤:** #4의 범위·패턴·테스트 기준에 도입 목표, 실패 피드백, 승리 결과를 넣는다. #8의 전조·UI 표현과 #11의 첫 테스트를 연결한다.
 
 각 단계가 끝날 때 팀원 한 명이 사전 설명 없이 플레이하고, 전조를 읽었는지와 사망 이유를 이해했는지 말로 확인한다.
