@@ -51,6 +51,8 @@ git lfs pull
 
 ## 개발 로드맵
 
+단일 보스전의 이야기와 공간 연출은 [이번 주 방향 결정 회의안](Docs/2026-09-24-direction-workshop.md)에서 팀이 확정합니다. [마지막 수문](Docs/2026-09-23-narrative-visual-direction.md)은 협의 후보이며, 이번 버전의 전투 범위와 일정은 [기획 기준안](Docs/2026-09-23-game-direction.md)을 참고합니다.
+
 1. DualSense 중심 입력 액션 재설계
 2. 3인칭 이동과 카메라 구현
 3. 락온, 스태미나, 회피 구현
