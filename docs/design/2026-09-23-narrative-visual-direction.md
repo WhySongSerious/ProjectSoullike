@@ -1,6 +1,6 @@
 # 서사·시각 디자인 협의안 A: 마지막 수문
 
-> 2026-09-23 팀 의견을 바탕으로 한 **미확정 후보**. [이번 주 방향 결정 회의안](2026-09-24-direction-workshop.md)에서 다른 주인공·보스 조합과 비교한 뒤 선택하거나 수정한다. 기존 Mechanic Girl·Stone Golem을 활용하는 안이며 캐릭터 유지 결정이 아니다. 현재 Unity 씬에 이 서사가 구현됐다는 뜻도 아니다. [기능·일정 기준](2026-09-23-game-direction.md) 및 [팀 허브 #2](https://github.com/WhySongSerious/ProjectSoullike/issues/2)와 함께 사용한다.
+> 2026-09-23 팀 의견을 바탕으로 한 **미확정 후보**. [이번 주 비동기 협의안](2026-09-24-direction-workshop.md)에서 다른 주인공·보스 조합과 비교한 뒤 선택하거나 수정한다. 기존 Mechanic Girl·Stone Golem을 활용하는 안이며 캐릭터 유지 결정이 아니다. 현재 Unity 씬에 이 서사가 구현됐다는 뜻도 아니다. [기능·일정 기준](2026-09-23-game-direction.md) 및 [팀 허브 #2](https://github.com/WhySongSerious/ProjectSoullike/issues/2)와 함께 사용한다.
 
 ## 이 게임이 들려줄 이야기
 
@@ -66,7 +66,7 @@
 
 ## 제작 순서: 서사와 디자인의 산출물
 
-1. **S0 / 팀 협의:** [회의안](2026-09-24-direction-workshop.md)의 후보 비교와 핵심 질문을 거쳐 방향을 먼저 고른다. 선택된 방향으로 1쪽짜리 스토리보드 4컷(입장·첫 패배·재도전·승리), 공간 평면 스케치, 문장 초안을 만든다. [#4](https://github.com/WhySongSerious/ProjectSoullike/issues/4)의 데모 범위와 함께 확정한다.
+1. **S0 / 팀 협의:** [협의안](2026-09-24-direction-workshop.md)의 후보 비교와 핵심 질문을 거쳐 방향을 먼저 고른다. 선택된 방향으로 1쪽짜리 스토리보드 4컷(입장·첫 패배·재도전·승리), 공간 평면 스케치, 문장 초안을 만든다. [#4](https://github.com/WhySongSerious/ProjectSoullike/issues/4)의 데모 범위와 함께 확정한다.
 2. **S1 / 이다윤·천지민:** 골렘 2종 공격의 전조를 실루엣·빛·소리로 한 장에 비교한다. [#8](https://github.com/WhySongSerious/ProjectSoullike/issues/8)의 UI/아트 명세와 [#7](https://github.com/WhySongSerious/ProjectSoullike/issues/7)의 실제 타격 시점을 맞춘다.
 3. **S2 / 팀 플레이 테스트:** 처음 보는 사람이 “왜 싸우는지”, “어떤 동작이 위험한지”, “왜 죽었는지”, “승리 후 무엇이 달라졌는지”를 설명할 수 있는지 묻는다. 틀린 답은 설명문을 늘리기 전에 화면과 연출에서 고친다.
 

@@ -74,7 +74,7 @@ Unity Hub에서 저장소 루트를 연 뒤 `Assets/Scenes/Combat.unity`를 실�
 
 ## 이번 주 서사·디자인 협의
 
-주인공·보스·이야기·공간 연출은 [S0 방향 결정 회의안](docs/design/2026-09-24-direction-workshop.md)에서 팀이 확정합니다. [마지막 수문](docs/design/2026-09-23-narrative-visual-direction.md)은 현재 캐릭터를 활용하는 미확정 후보이며, [기획 기준안](docs/design/2026-09-23-game-direction.md)은 전투 범위와 일정상의 경계를 정리합니다.
+주인공·보스·이야기·공간 연출은 [S0 비동기 협의안](docs/design/2026-09-24-direction-workshop.md)에 따라 이번 주 팀이 확정합니다. [마지막 수문](docs/design/2026-09-23-narrative-visual-direction.md)은 현재 캐릭터를 활용하는 미확정 후보이며, [기획 기준안](docs/design/2026-09-23-game-direction.md)은 전투 범위와 일정상의 경계를 정리합니다.
 
 ## 개발 규칙
 
