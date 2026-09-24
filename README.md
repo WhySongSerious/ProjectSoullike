@@ -76,6 +76,8 @@ Unity Hub에서 저장소 루트를 연 뒤 `Assets/Scenes/Combat.unity`를 실�
 
 주인공·보스·이야기·공간 연출은 [S0 비동기 협의안](docs/design/2026-09-24-direction-workshop.md)에 따라 이번 주 팀이 확정합니다. [마지막 수문](docs/design/2026-09-23-narrative-visual-direction.md)은 현재 캐릭터를 활용하는 미확정 후보이며, [기획 기준안](docs/design/2026-09-23-game-direction.md)은 전투 범위와 일정상의 경계를 정리합니다.
 
+[9/25 에셋 리서치](docs/design/2026-09-25-asset-research.md)는 현재 에셋 재사용, 서사 후보별 외형·공간, 무료/소액 유료 조합과 적용 전 확인 사항을 정리합니다. 구매 및 최종 미술 방향은 미확정입니다.
+
 ## 개발 규칙
 
 - 코드: `Assets/Soullike/Scripts`의 Combat·Player·Enemies·Editor/Setup 구조를 유지합니다.
