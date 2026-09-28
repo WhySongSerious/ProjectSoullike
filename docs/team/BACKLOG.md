@@ -1,6 +1,6 @@
 # 초기 백로그
 
-2026-09-23 갱신. 2026-11-23 마감, ML 동적 난이도 필수. SP·주간 수행량은 가용시간에 맞춰 조정합니다. 실제 진행 상태는 GitHub 이슈를 확인합니다.
+2026-09-28 갱신. 2026-11-23 마감, ML 동적 난이도 필수. SP·주간 수행량은 가용시간에 맞춰 조정합니다. 실제 진행 상태는 GitHub 이슈를 확인합니다. [9/28 S1 회의 전 정리](../design/2026-09-28-story-and-s1-sprint.md)의 서사와 회의 결정을 우선합니다.
 
 | ID | 목표 | 우선순위 | 담당 | SP 초안 | 작업 | 선행 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -8,8 +8,10 @@
 | SPEC | S0 | P0 | 이다윤 | 2 | [#4 데모 범위·보스 패턴·테스트 기준 확정](https://github.com/WhySongSerious/ProjectSoullike/issues/4) | — |
 | SPIKE | BACKLOG | P2 | 미정 | 미산정 | [#5 여유 시 진행: QR 모바일 웹 컨트롤러](https://github.com/WhySongSerious/ProjectSoullike/issues/5) | #15, #26 |
 | DODGE | S1 | P0 | 송재혁 | 5 | [#6 회피·스태미나 최소 전투 루프 구현](https://github.com/WhySongSerious/ProjectSoullike/issues/6) | #3, #4 |
-| BOSS | S1 | P0 | 천지민 | 5 | [#7 골렘 공격 예고·판정·후딜과 모션 연결](https://github.com/WhySongSerious/ProjectSoullike/issues/7) | #4 |
+| BOSS | S1 | P0 | 천지민 | 5 | [#7 수호자 공격 예고·판정·후딜과 모션 연결](https://github.com/WhySongSerious/ProjectSoullike/issues/7) | #4 |
 | ART | S1 | P0 | 이다윤 | 3 | [#8 전투 가독성·UI·아트 리소스 명세](https://github.com/WhySongSerious/ProjectSoullike/issues/8) | #4 |
+| LEVEL | S1 | P0 | 이다윤(회의 확인) | 회의 산정 | [#29 보스전 레벨·맵 디자인 명세](https://github.com/WhySongSerious/ProjectSoullike/issues/29) | #4 |
+| ASSET_CHECK | S1 | P1 | 송재혁 | 시간 상한 지정 | [#30 캐릭터·맵 에셋 적용 가능성 확인](https://github.com/WhySongSerious/ProjectSoullike/issues/30) | #4 |
 | LOOP | S2 | P0 | 송재혁 | 5 | [#9 피격·사망·재시작·승리 흐름 완성](https://github.com/WhySongSerious/ProjectSoullike/issues/9) | #6, #7 |
 | BOSSLOOP | S2 | P0 | 천지민 | 3 | [#10 보스 전투 리셋·패턴 예외 처리 통합](https://github.com/WhySongSerious/ProjectSoullike/issues/10) | #7 |
 | PLAYTEST | S2 | P0 | 이다윤 | 3 | [#11 첫 통합 플레이테스트·밸런스 조정안](https://github.com/WhySongSerious/ProjectSoullike/issues/11) | #9, #7 |
@@ -31,6 +33,6 @@
 | INFERENCE | S7 | P0 | 송재혁 | 5 | [#26 학습 모델의 Unity 추론·동적 난이도 적용](https://github.com/WhySongSerious/ProjectSoullike/issues/26) | #24, #25 |
 | MLQA | S8 | P0 | 이다윤 | 3 | [#27 ML 동적 난이도 비교 플레이테스트·최종 검증](https://github.com/WhySongSerious/ProjectSoullike/issues/27) | #26 |
 
-각 이슈에 구체적인 완료 체크리스트가 있습니다. 필수 23개, 선택 2개이며 허브 이슈는 작업 수에서 제외합니다.
+각 이슈에 구체적인 완료 체크리스트가 있습니다. #29는 필수 레벨 명세, #30은 시간 상한을 둔 에셋 검증입니다. 허브 이슈와 PR은 작업 수에서 제외합니다.
 
 QR 모바일 컨트롤러는 핵심 전투·ML 적용 검증 후 여유가 있으면 진행합니다. 착수 전 담당·추정·실기기 검증 기준을 정하며 기본 필수 작업량에 포함하지 않습니다. 패링 실험 브랜치는 병합 전 확인 대상이고 완료된 기능으로 집계하지 않습니다.
