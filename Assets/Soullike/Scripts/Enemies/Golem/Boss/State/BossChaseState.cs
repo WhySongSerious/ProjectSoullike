@@ -8,7 +8,8 @@ namespace ProjectSoullike
 
         public override void Update()
         {
-            if (!Boss.HasTarget)
+            if (!Boss.HasTarget || (Boss.UseGuardianPatterns &&
+                (!Boss.HasLivingTarget || !Boss.IsTargetWithinDetectionRange())))
             {
                 Boss.ChangeState(BossStateType.Idle);
                 return;
