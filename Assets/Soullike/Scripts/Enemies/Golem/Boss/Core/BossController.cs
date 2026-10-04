@@ -232,7 +232,12 @@ namespace ProjectSoullike
 
         public void StopMovement()
         {
-            SetMovementAnimation(0f);
+            // Stop is called once on state entry; a damped write would leave a
+            // nonzero blend value until another movement update is requested.
+            if (_animator != null)
+            {
+                _animator.SetFloat(MoveSpeedHash, 0f);
+            }
 
             if (_agent == null || !_agent.isActiveAndEnabled || !_agent.isOnNavMesh)
             {
