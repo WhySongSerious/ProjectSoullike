@@ -10,7 +10,7 @@
 
 ```powershell
 git lfs install
-git clone --branch codex/initial-content https://github.com/WhySongSerious/ProjectSoullike.git
+git clone --branch integration/s1-combat-arena https://github.com/WhySongSerious/ProjectSoullike.git
 cd ProjectSoullike
 git lfs pull
 ```
@@ -19,12 +19,14 @@ git lfs pull
 
 ```powershell
 git fetch origin
-git switch codex/initial-content
+git switch integration/s1-combat-arena
 git pull --ff-only
 git lfs pull
 ```
 
 Unity Hub에 저장소 루트를 등록하고 `Assets/Scenes/Combat.unity`를 실행합니다. 누락 에셋이면 LFS 다운로드를 확인하고, 컴파일 오류는 Console의 첫 오류와 재현 절차를 이슈에 기록합니다.
+
+파일 위치와 현재 담당은 [프로젝트 파일 지도](PROJECT_MAP.md)에서 확인합니다. 다윤 맵은 `Assets/Scenes/BossArena_Blockout.unity`에 있으며, 별도 [던전 에셋 임포트·설정](../design/2026-10-06-boss-arena-blockout.md)이 필요합니다.
 
 ## 개발 목표
 
@@ -43,7 +45,7 @@ Unity Hub에 저장소 루트를 등록하고 `Assets/Scenes/Combat.unity`를 �
 1. 이슈 완료 기준과 선행 작업을 확인하고 상태를 Ready → In progress로 변경.
 2. 기준 브랜치에서 `feature/<이슈번호>-<주제>` 또는 `asset/<이슈번호>-<주제>` 생성.
 3. 변경 파일과 검증 결과를 커밋·push하고 PR 생성.
-4. **PR base는 현재 `codex/initial-content`**. PR #1이 병합된 뒤에만 팀 공지로 main 기준 전환.
+4. **S1 작업 PR의 base는 `integration/s1-combat-arena`**로 맞추고, PR 생성 전에 최신 통합 기준을 확인. 통합 브랜치는 [PR #33](https://github.com/WhySongSerious/ProjectSoullike/pull/33)으로 `main`에 제안 중.
 5. 담당자 외 1명 검토 → 병합 → 플레이/산출물 확인 → 이슈 닫기.
 
 기본 브랜치가 아닌 개발 브랜치에 병합하면 `Closes #번호`가 즉시 이슈를 닫지 않을 수 있습니다. 검증 후 실제 이슈 상태를 확인하고 수동으로 완료 처리합니다.

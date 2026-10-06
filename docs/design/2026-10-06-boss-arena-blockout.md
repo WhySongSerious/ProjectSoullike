@@ -6,14 +6,14 @@
 
 ## 열어 보는 방법
 
-에셋 원본(약 3.2GB)과 씬 파일은 저장소에 올리지 않는다. 배치 데이터를 담은 에디터 스크립트로 각자의 Unity에서 같은 맵을 생성한다.
+에셋 원본(로컬 임포트 후 약 4GB)은 저장소에 올리지 않는다. 배치 데이터를 담은 에디터 스크립트와 그 결과 씬·밤하늘 머티리얼은 공유한다. 씬을 정상으로 보려면 각자의 Unity에 동일한 에셋을 임포트해야 한다.
 
 1. Fab에서 [Dungeon Environment / 135+ Assets](https://www.fab.com/listings/bb39bae4-7f7a-4127-b07e-151cf52db0f6)(무료)의 Unity 패키지를 받는다.
 2. Unity에서 `Assets > Import Package > Custom Package...`로 가져온다. 서명 없음 경고가 뜨면 `Import Anyway`를 누른다.
 3. `Tools > Project Soullike > Dungeon Environment > 1. Set Up Imported Package`를 실행한다.
-4. `Tools > Project Soullike > Dungeon Environment > 2. Build Boss Arena Blockout`를 실행한다. `Assets/Scenes/BossArena_Blockout.unity`가 생성되고 열린다.
+4. `Assets/Scenes/BossArena_Blockout.unity`를 연다.
 
-3번만 실행해도 4번에서 자동으로 실행된다. 두 메뉴는 여러 번 실행해도 결과가 같다.
+배치 수치가 바뀌었거나 씬을 다시 생성할 때만 `Tools > Project Soullike > Dungeon Environment > 2. Build Boss Arena Blockout`를 실행한다. 직접 수정한 씬을 덮어쓰기 전에 Unity가 확인 창을 띄운다. 2번 메뉴는 필요하면 1번 설정도 자동 실행한다.
 
 ## 설정 스크립트가 하는 일
 
@@ -45,5 +45,5 @@
 ## 확인한 것과 남은 것
 
 - 확인함: Unity 6000.6에서 원본 패키지를 새로 가져온 상태부터 1→2번 메뉴를 실행했다. 원래 블록아웃과 프리팹 329개의 위치·크기가 모두 같았다. 바닥 전체 충돌, 입구 통과 가능, 봉인문 통과 불가를 확인했다.
-- 미확인: 팀 기준 버전 6000.3.21에서의 실행. 사용한 API는 6000.3에도 있는 것만 썼다.
+- 2026-10-07에 팀 기준 버전 6000.3.21f1에서 원본 임포트 → 설정 → 씬 생성 로그까지 확인했다. 최종 화면과 Play 모드의 체감·충돌은 직접 검증이 남았다.
 - 미정: 실제 플레이어·골렘을 배치했을 때의 체감 크기, 최종 맵 에셋 선택(#30).
