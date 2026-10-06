@@ -29,6 +29,15 @@
 - 용도: 플레이어 무기와 전투 애니메이션
 - 비고: 원본 Unity 패키지는 프로젝트 밖의 `SourceAssets/TC_Sword_Free_Pack`에서 관리합니다.
 
+## Dungeon Environment / 135+ Assets
+
+- 배포처: Fab (무료)
+- 상품 페이지: https://www.fab.com/listings/bb39bae4-7f7a-4127-b07e-151cf52db0f6
+- 라이선스: Fab 라이선스 조건 확인 필요 (재배포 조건 미확인)
+- 프로젝트 경로: `Assets/ThirdParty/Dungeon_Environment` (**저장소에 커밋하지 않음**, `.gitignore` 처리)
+- 용도: #29 보스 아레나 레벨 블록아웃
+- 비고: 원본은 각자 Fab에서 받아 가져온 뒤 `Tools > Project Soullike > Dungeon Environment` 메뉴로 URP 변환·콜라이더 연결·아레나 생성을 한다. 원본 `.unitypackage`는 약 3.2GB다.
+
 ## 관리 원칙
 
 - 새로운 외부 에셋을 추가할 때 제작자, 배포처, 라이선스와 프로젝트 경로를 함께 기록합니다.

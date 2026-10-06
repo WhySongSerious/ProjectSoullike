@@ -2,16 +2,17 @@
 
 Unity 6 기반 3D 소울라이크 전투 프로토타입입니다. **송재혁·천지민·이다윤 3명이 11월 23일까지 머신러닝 기반 동적 난이도를 포함한 전투 데모를 완성**합니다.
 
-> 개발 코드 기준: **`codex/initial-content`** · 코드 확인 기준 커밋: `d8d4a43`
-> 현재 `main`은 팀 안내 진입점입니다. 게임 실행은 아래 명령으로 개발 브랜치를 받으세요.
+> 현재 S1 통합 작업: **`integration/s1-combat-arena`** · [main 병합 전 검토 PR #33](https://github.com/WhySongSerious/ProjectSoullike/pull/33).
+> `main`에는 초기 전투 프로토타입이 있고, 지민의 보스 실험과 다윤의 맵은 위 통합 브랜치에서 확인합니다.
 > 목표일 **2026-11-23** · 머신러닝 기반 동적 난이도 **필수** · 휴대폰 웹 컨트롤러 **시간 여유 시 선택**.
 
 ## 처음 오셨나요?
 
 1. [팀 시작 안내](docs/team/START_HERE.md)를 읽고 프로젝트를 실행합니다.
-2. [역할 분담·스크럼·주간 일정](docs/team/SPRINT_PLAN.md)을 확인합니다.
-3. [팀 작업 허브 #2](https://github.com/WhySongSerious/ProjectSoullike/issues/2)에서 자기 이름의 이슈를 선택합니다.
-4. [전체 작업 목록](docs/team/BACKLOG.md)의 완료 기준에 맞춰 작업하고 PR과 검증 결과를 연결합니다.
+2. [프로젝트 파일 지도](docs/team/PROJECT_MAP.md)에서 씬·프리팹·외부 에셋의 위치와 담당을 확인합니다.
+3. [역할 분담·스크럼·주간 일정](docs/team/SPRINT_PLAN.md)을 확인합니다.
+4. [팀 작업 허브 #2](https://github.com/WhySongSerious/ProjectSoullike/issues/2)에서 자기 이름의 이슈를 선택합니다.
+5. [전체 작업 목록](docs/team/BACKLOG.md)의 완료 기준에 맞춰 작업하고 PR과 검증 결과를 연결합니다.
 
 **관리 화면:** [팀 허브](https://github.com/WhySongSerious/ProjectSoullike/issues/2) · [열린 작업](https://github.com/WhySongSerious/ProjectSoullike/issues?q=is%3Aissue+is%3Aopen) · [GitHub 관리 방법](docs/team/GITHUB_WORKFLOW.md)
 
@@ -22,6 +23,8 @@ Unity 6 기반 3D 소울라이크 전투 프로토타입입니다. **송재혁·
 | 송재혁 · 팀장 | 우선순위·통합·플레이어 전투·VFX·애니메이션·ML 총괄 | 데이터 수집 구조, 학습 모델, Unity 추론·통합 |
 | 천지민 | 보스 AI·패턴·판정·난이도 조절 연동·RC 검증 | 수호자 전투, 조절 API, 회귀 검증 |
 | 이다윤 | 서사·보스 콘셉트·레벨/맵 디자인·아트·UI·수집/평가 운영 | 4컷 흐름, 한 전투장 평면도, 가독성 기준, 난이도 평가 |
+
+스크립트별 Git 작성 이력과 현재 수정·검토 담당은 [스크립트 작성 이력과 현재 담당](docs/team/SCRIPT_OWNERSHIP.md)에 정리했습니다.
 
 별도 아트 전담자는 없습니다. 다윤은 기획과 아트 방향·리소스를 맡고, 재혁은 VFX와 애니메이션 적용을 맡습니다. 세부 배정은 팀의 가용시간에 맞춰 주간 계획에서 조정합니다.
 
@@ -39,12 +42,14 @@ Unity `6000.3.21f1` / URP `17.3.0` / Input System `1.20.0` / AI Navigation `2.0.
 
 ```powershell
 git lfs install
-git clone --branch codex/initial-content https://github.com/WhySongSerious/ProjectSoullike.git
+git clone --branch integration/s1-combat-arena https://github.com/WhySongSerious/ProjectSoullike.git
 cd ProjectSoullike
 git lfs pull
 ```
 
 Unity Hub에서 저장소 루트를 연 뒤 `Assets/Scenes/Combat.unity`를 실행합니다. 기존 clone 사용자는 미커밋 작업을 보존한 뒤 [시작 안내](docs/team/START_HERE.md)를 따르세요.
+
+맵 확인은 `Assets/Scenes/BossArena_Blockout.unity`를 엽니다. 던전 원본 에셋은 Git에 없으므로 [맵 설치 안내](docs/design/2026-10-06-boss-arena-blockout.md)에 따라 각자 임포트해야 합니다.
 
 ## 현재 구현 근거
 
@@ -54,10 +59,11 @@ Unity Hub에서 저장소 루트를 연 뒤 `Assets/Scenes/Combat.unity`를 실�
 | 플레이어 | 3인칭 이동·달리기·카메라 충돌·3단 콤보·락온 |
 | 입력 | 키보드/마우스·DualSense Input System 액션 |
 | 전투 | 공격별 피해·플레이어/골렘 임시 체력 UI·사망 처리 |
-| 보스 | Idle/Chase/Attack/Dead 상태 머신·추적·근접 피해 |
-| 남은 필수 | 회피·스태미나·피격 연출·보스 전용 모션·재시작/승리 흐름·ML 동적 난이도·검수 |
+| 보스 | `JIMIN.unity`에 내려베기·지연 연격의 전조/판정 프로토타입. 최종 모델·모션 연결 전 |
+| 맵 | 다윤의 `BossArena_Blockout.unity` 배치 씬. 외부 던전 에셋은 각자 임포트 필요 |
+| 남은 필수 | 회피·스태미나·피격 연출·보스 전용 모션·맵과 전투 연결·재시작/승리 흐름·ML 동적 난이도·검수 |
 
-이는 기준 브랜치의 소스/README 확인 결과입니다. 이번 정리 작업에서 Unity 플레이·빌드를 새로 검증한 것은 아닙니다. 별도 패링 실험 브랜치는 기본 구현 완료로 집계하지 않습니다.
+이는 S1 통합 브랜치의 코드와 씬 구성 기준입니다. 맵 씬 생성과 파일 참조를 확인했지만, 통합 전투의 Unity Play 검증은 별도 작업입니다. 패링 실험 브랜치는 기본 구현 완료로 집계하지 않습니다.
 
 ## 기본 조작
 
@@ -85,6 +91,6 @@ Unity Hub에서 저장소 루트를 연 뒤 `Assets/Scenes/Combat.unity`를 실�
 - 씬·Animator·프리팹은 작업 전 이슈에서 편집자를 지정합니다.
 - `Library/Temp/Logs/UserSettings`·빌드 산출물·원본 설치 패키지는 커밋하지 않습니다.
 - 대용량 바이너리는 Git LFS를 사용합니다.
-- [개발 브랜치 AGENTS.md](https://github.com/WhySongSerious/ProjectSoullike/blob/codex/initial-content/AGENTS.md)와 [외부 에셋 목록](https://github.com/WhySongSerious/ProjectSoullike/blob/codex/initial-content/THIRD_PARTY_ASSETS.md)을 따릅니다.
+- [작업 규칙](AGENTS.md)과 [외부 에셋 목록](THIRD_PARTY_ASSETS.md)을 따릅니다.
 
-[현재 코드](https://github.com/WhySongSerious/ProjectSoullike/tree/codex/initial-content) · [초기 코드 통합 PR #1](https://github.com/WhySongSerious/ProjectSoullike/pull/1) · [팀장 전달문](docs/team/TEAM_BRIEF.md)
+[S1 통합 코드](https://github.com/WhySongSerious/ProjectSoullike/tree/integration/s1-combat-arena) · [통합 PR #33](https://github.com/WhySongSerious/ProjectSoullike/pull/33) · [팀장 전달문](docs/team/TEAM_BRIEF.md)

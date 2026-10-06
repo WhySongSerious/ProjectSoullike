@@ -12,7 +12,7 @@
 | [이다윤](https://github.com/WhySongSerious/ProjectSoullike/issues?q=is%3Aissue%20is%3Aopen%20%22%EC%9D%B4%EB%8B%A4%EC%9C%A4%22%20in%3Atitle) | 기획·아트·QA |
 | [선택 백로그](https://github.com/WhySongSerious/ProjectSoullike/issues?q=is%3Aissue%20is%3Aopen%20%22%5BBACKLOG%5D%22%20in%3Atitle) | QR 컨트롤러 등 여유 시 검토 |
 
-이슈 제목은 [S번호][우선순위][담당자]로 시작합니다. 담당 계정이 초대되면 Assignee를 연결합니다. 재혁 계정은 WhySongSerious로 연결했고 지민·다윤은 이름만 기록한 상태입니다.
+이슈 제목은 [S번호][우선순위][담당자]로 시작합니다. 현재 파일의 위치와 담당은 [프로젝트 파일 지도](PROJECT_MAP.md) 및 [스크립트 담당표](SCRIPT_OWNERSHIP.md)를 확인합니다. 이슈 Assignee는 실제 GitHub 권한과 배정 상태를 확인해 연결합니다.
 
 ## 이슈 사용 규칙
 
@@ -45,7 +45,7 @@ P0는 이번 데모 필수, P1은 개선, P2는 선택 기능입니다. 기능 �
 
 ## PR와 공유
 
-- 현재 기능 PR base: codex/initial-content. PR #1은 아직 Draft이며 이번 정리로 병합하지 않았습니다.
+- S1 작업 PR base: `integration/s1-combat-arena`. 통합 결과는 [Draft PR #33](https://github.com/WhySongSerious/ProjectSoullike/pull/33)에서 `main` 병합 전 검토합니다. 이후 스프린트의 base는 착수 전 확인합니다.
 - 1개 PR에 1개 논리적 변경. 이슈 번호, 변경 이유, 검증, 씬/프리팹 영향 기록.
 - 프로젝트 규칙·에셋 출처는 개발 브랜치 문서 참고.
 - 팀장은 저장소 Settings → Collaborators에서 팀원을 초대하고 수락 후 Assignee 연결.

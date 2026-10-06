@@ -3,6 +3,9 @@ Refs #
 
 ## 변경 목적과 결과
 
+## 변경 파일 담당
+`docs/team/SCRIPT_OWNERSHIP.md` 기준 담당자, 실제 구현자, 검토 요청할 팀원:
+
 ## 검증
 - [ ] 관련 빌드/실행 또는 문서 검증
 - [ ] 씬/프리팹/Animator 변경 시 참조·Console 확인
@@ -14,4 +17,4 @@ Refs #
 ## 영향과 남은 점
 미검증 항목, 알려진 제약:
 
-현재 개발 PR의 base는 codex/initial-content입니다. PR #1 병합 후 팀 공지로 변경합니다.
+PR 생성 전 현재 통합 기준 브랜치를 확인합니다. S1 통합 브랜치는 `integration/s1-combat-arena`이며 `main` 대상 통합 PR은 #33입니다.
