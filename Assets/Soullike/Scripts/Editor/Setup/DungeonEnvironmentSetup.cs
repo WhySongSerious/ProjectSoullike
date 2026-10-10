@@ -12,7 +12,6 @@ namespace ProjectSoullike.Editor
     //  1) Assets/Dungeon_Environment → Assets/ThirdParty/Dungeon_Environment 이동 (GUID 유지)
     //  2) 언리얼 변환 셰이더(Unreal/*, Built-in Standard/Particles) 머티리얼 → URP Lit / Particles Unlit
     //  3) 프리팹의 비어 있는 MeshCollider에 메시 연결
-    //  4) [추가] 플레이어 빌드를 깨는 패키지 런타임 스크립트의 UnityEditor 참조 제거
     // 여러 번 실행해도 결과가 같다.
     public static class DungeonEnvironmentSetup
     {
@@ -44,9 +43,8 @@ namespace ProjectSoullike.Editor
                 int materials = ConvertMaterials(root);
                 FixCobweb(root);
                 int colliders = FixColliders(root);
-                bool patched = PatchRuntimeScripts(root); // [추가]
                 AssetDatabase.SaveAssets();
-                Debug.Log($"{LogPrefix} 완료 · 마스크 텍스처 {packed}개 생성, 머티리얼 {materials}개 변환, 콜라이더 {colliders}개 연결, 빌드 오류 스크립트 수정 {(patched ? 1 : 0)}개 · {root}");
+                Debug.Log($"{LogPrefix} 완료 · 마스크 텍스처 {packed}개 생성, 머티리얼 {materials}개 변환, 콜라이더 {colliders}개 연결 · {root}");
             }
             finally
             {
@@ -78,22 +76,6 @@ namespace ProjectSoullike.Editor
             }
 
             return TargetRoot;
-        }
-
-        // [추가] TreeInstanceComponent.cs는 런타임 스크립트인데 쓰지 않는 using UnityEditor; 가 있어
-        // 에셋을 가져온 프로젝트의 플레이어 빌드가 컴파일 오류로 실패한다. 해당 줄만 주석 처리한다.
-        private static bool PatchRuntimeScripts(string root)
-        {
-            string path = root + "/Scripts/TreeInstanceComponent.cs";
-            if (!File.Exists(path)) return false;
-
-            string text = File.ReadAllText(path);
-            const string editorUsing = "using UnityEditor;";
-            if (!text.Contains(editorUsing) || text.Contains("// " + editorUsing)) return false;
-
-            File.WriteAllText(path, text.Replace(editorUsing, "// " + editorUsing + " // DungeonEnvironmentSetup: 플레이어 빌드 오류로 비활성화"));
-            AssetDatabase.ImportAsset(path);
-            return true;
         }
 
         // 언리얼 ORM(R=AO, G=Roughness, B=Metallic) → URP 마스크(R=Metallic, G=AO, A=Smoothness)
