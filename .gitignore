@@ -115,3 +115,11 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# Fab "Dungeon Environment" 원본과 로컬 생성물 (docs/design/2026-10-06-boss-arena-blockout.md 참고)
+/[Aa]ssets/ThirdParty/Dungeon_Environment/
+/[Aa]ssets/ThirdParty/Dungeon_Environment.meta
+/[Aa]ssets/Dungeon_Environment/
+/[Aa]ssets/Dungeon_Environment.meta
+/[Aa]ssets/Scenes/BossArena_Blockout.unity*
+/[Aa]ssets/Soullike/Materials/BossArena_NightSky.mat*
