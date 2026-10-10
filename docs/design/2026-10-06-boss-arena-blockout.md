@@ -8,12 +8,12 @@
 
 에셋 원본(약 3.2GB)과 씬 파일은 저장소에 올리지 않는다. 배치 데이터를 담은 에디터 스크립트로 각자의 Unity에서 같은 맵을 생성한다.
 
-1. Fab에서 [Dungeon Environment / 135+ Assets](https://www.fab.com/listings/bb39bae4-7f7a-4127-b07e-151cf52db0f6)(무료)의 Unity 패키지를 받는다.
+1. Fab에서 [Dungeon Environment / 135+ Assets](https://www.fab.com/listings/bb39bae4-7f7a-4127-b07e-151cf52db0f6)(무료)의 **Unity** 형식 패키지를 받는다. 확인에 쓴 파일은 `DungeonEnvironment_91Assets_202.unitypackage`(약 3.2GB)다.
 2. Unity에서 `Assets > Import Package > Custom Package...`로 가져온다. 서명 없음 경고가 뜨면 `Import Anyway`를 누른다.
 3. `Tools > Project Soullike > Dungeon Environment > 1. Set Up Imported Package`를 실행한다.
 4. `Tools > Project Soullike > Dungeon Environment > 2. Build Boss Arena Blockout`를 실행한다. `Assets/Scenes/BossArena_Blockout.unity`가 생성되고 열린다.
 
-3번만 실행해도 4번에서 자동으로 실행된다. 두 메뉴는 여러 번 실행해도 결과가 같다.
+4번만 실행해도 3번이 필요하면 자동으로 먼저 실행된다. 두 메뉴는 여러 번 실행해도 결과가 같다. 처음 실행할 때는 텍스처 변환 때문에 몇 분 걸린다.
 
 ## 설정 스크립트가 하는 일
 
@@ -25,6 +25,9 @@
 | 메시 UV의 V축 반전 | 텍스처가 뒤집힘 | Base Map 타일링 (1, -1), 오프셋 (0, 1) |
 | 프리팹 MeshCollider의 메시가 비어 있음 (83개) | 캐릭터가 바닥과 벽을 통과 | 자식의 렌더 메시를 콜라이더에 연결 |
 | 거미줄 텍스처에 알파 채널 없음 | 검은 사각형 | 회색값을 알파로 사용, 알파 클립 |
+| 런타임 스크립트 `TreeInstanceComponent.cs`의 `using UnityEditor;` | 에디터는 정상이지만 **플레이어 빌드가 컴파일 오류로 실패** | 해당 줄만 주석 처리 |
+
+패키지에 함께 들어 있는 `Scripts/Utilities.cs`(UTU 변환 도구)는 프로젝트 안의 **모든 `.obj` 모델 임포트**를 가로채 메시를 다시 만든다. 현재 저장소에는 `.obj`가 없어 영향이 없지만, 나중에 `.obj`를 쓰게 되면 이 파일을 지우거나 FBX로 가져와야 한다.
 
 패키지는 저장소 규칙에 맞춰 `Assets/ThirdParty/Dungeon_Environment`로 옮긴다. GUID는 유지된다.
 
